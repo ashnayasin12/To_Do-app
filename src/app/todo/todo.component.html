@@ -1,1 +1,26 @@
-<p>todo works!</p>
+<h1 align="center"><b>TO DO LIST</b></h1>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead class="table-info">
+                  <tr>
+                    <th scope="col"><b>USER ID</b></th>
+                    <th scope="col"><b>ID</b></th>
+                    <th scope="col"><b>TITLE</b></th>
+                    <th scope="col"><b>COMPLETED</b></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of data">
+                    <th scope="row">{{i.userId}}</th>
+                    <td>{{i.id}}</td>
+                    <td>{{i.title}}</td>
+                    <td>{{i.completed}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

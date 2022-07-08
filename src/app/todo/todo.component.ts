@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:ApiService)  {
+    api.viewTodos().subscribe(
+      (response)=> {
+        this.data=response
+      }
+    )
+   }
 
   ngOnInit(): void {
   }
+data:any=[
+
+]
+
 
 }
